@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy · LocalFlow</title>
-<meta name="description" content="LocalFlow collects nothing: what it records, where it runs, and the one time it uses the network.">
+<meta name="description" content="LocalFlow collects nothing: what it records, where it runs, and when it uses the network.">
 <meta name="theme-color" content="#111010" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f5f2eb" media="(prefers-color-scheme: light)">
 <meta property="og:title" content="LocalFlow: talk instead of type">
@@ -30,14 +30,13 @@
   <h2>Your words</h2>
   <p>The transcript is cleaned up by a model running on your Mac and pasted into the app you're typing in. LocalFlow keeps no history of what you said. Its logs record start-up, permission status, errors and how long each step took, never the words.</p>
   <h2>The network</h2>
-  <p>LocalFlow uses the internet once: to download its two models from Hugging Face on first run. Each file is checked against its published SHA-256 checksum. After that it works with Wi-Fi off. If you point it at a cloud model yourself in its settings, your words go to that service; that is off by default.</p>
+  <p>LocalFlow uses the internet to download its two models from Hugging Face on first run. Each file is checked against its published SHA-256 checksum. After that it works with Wi-Fi off. It never checks for updates on its own: Check for Updates in its menu asks GitHub for the latest version number only when you click it, and sends nothing about you. If you point it at a cloud model yourself in its settings, your words go to that service; that is off by default.</p>
   <h2>This website</h2>
   <p>This site has no analytics and sets no cookies. The download counter asks GitHub's public API for release download totals from your browser.</p>
   <h2>Permissions</h2>
   <ul>
     <li><b>Microphone</b>: to hear you while recording.</li>
-    <li><b>Accessibility</b>: to paste the text into your app.</li>
-    <li><b>Input Monitoring</b>: to see your dictation key from any app.</li>
+    <li><b>Accessibility</b>: to see your dictation key from any app, and to paste the text into your app.</li>
   </ul>
 </div></section>
 
