@@ -28,15 +28,21 @@
   <div class="cta" style="margin-bottom:56px"><a class="button" href="https://github.com/Ryan-Loofy/localflow-app/releases/latest/download/LocalFlow.dmg"><svg viewBox="0 0 18 18" aria-hidden="true"><path fill="currentColor" d="M8 1h2v9.2l3-3 1.4 1.4L9 14 3.6 8.6 5 7.2l3 3z"/><path fill="currentColor" d="M2 15.5h14v2H2z"/></svg>Download LocalFlow.dmg</a><span class="fine">Free. No account.</span></div>
 
   <h2>First open</h2>
-  <p style="margin-bottom:22px">LocalFlow isn't signed with an Apple Developer ID yet, so macOS asks you to approve it once. This takes about a minute.</p>
+  <div class="notice">
+    <p><b>macOS will block the first open. That's expected.</b> LocalFlow isn't signed with an Apple Developer ID yet, so macOS shows "Apple could not verify LocalFlow is free of malware" with only a Done button. The way past it isn't in that window: it's in System Settings, in step 3 below. You only do this once.</p>
+  </div>
   <ol class="steps">
     <li><div><b>Drag it into Applications</b>Open <code>LocalFlow.dmg</code> and drag LocalFlow onto the Applications folder.</div></li>
-    <li><div><b>Open it, then click Done</b>macOS says it can't verify the developer. Click Done, not Move to Trash.</div></li>
-    <li><div><b>Click Open Anyway</b>Open System Settings, go to Privacy &amp; Security, scroll down, and click Open Anyway next to LocalFlow. Confirm with your password or Touch ID.</div></li>
+    <li><div><b>Open it, then click Done</b>Double-click LocalFlow in Applications. macOS says it could not verify LocalFlow. Click Done, not Move to Trash.</div></li>
+    <li><div><b>Find Open Anyway in System Settings</b>Open System Settings (Apple menu, top left), click Privacy &amp; Security in the sidebar, and scroll all the way to the bottom. Under Security it says "LocalFlow was blocked to protect your Mac." Click Open Anyway, then Open, and confirm with your password or Touch ID. The button only appears after step 2, and stays for about an hour.</div></li>
     <li><div><b>Download the models</b>In the Set Up LocalFlow window, click Download. About 5 minutes on a fast connection.</div></li>
     <li><div><b>Allow three things</b>Microphone (to hear you), Accessibility (to paste), Input Monitoring (to see your key). The window shows each one as Allowed when it's on.</div></li>
     <li><div><b>Pick your key and go</b>Caps Lock or fn. Tap it, talk, tap again.</div></li>
   </ol>
+
+  <h2>Or skip the block with Terminal</h2>
+  <p>If you'd rather not go through System Settings, do step 1, then paste this into Terminal (in Applications, Utilities) and press Return. It removes the "downloaded from the internet" flag macOS checks, and LocalFlow then opens normally. Carry on from step 4.</p>
+  <div class="cmd"><code id="unblock">xattr -dr com.apple.quarantine /Applications/LocalFlow.app</code><button type="button" class="copy" data-copy="unblock">Copy</button></div>
 
   <h2 style="margin-top:64px">Downloads so far</h2>
   <div class="counts" hidden>

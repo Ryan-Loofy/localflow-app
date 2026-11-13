@@ -130,3 +130,13 @@ const RELEASES_REPO = "Ryan-Loofy/localflow-app";
     note.textContent = "Download counts are unavailable right now.";
   }
 })();
+
+/* ---------- Copy buttons for Terminal commands. ---------- */
+document.querySelectorAll(".copy").forEach(btn => {
+  btn.addEventListener("click", async () => {
+    const text = document.getElementById(btn.dataset.copy).textContent;
+    try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
+    catch { btn.textContent = "Select and copy"; }
+    setTimeout(() => { btn.textContent = "Copy"; }, 2000);
+  });
+});
