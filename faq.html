@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ · LocalFlow</title>
+<meta name="description" content="Answers about LocalFlow: price, privacy, first open, speed, supported Macs and apps.">
+<meta name="theme-color" content="#111010" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f2eb" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="LocalFlow: talk instead of type">
+<meta property="og:description" content="Free dictation for your Mac. Tap a key, talk, and clean text lands where you type. Nothing leaves your Mac.">
+<link rel="canonical" href="https://localflowvoice.com/faq.html">
+<meta property="og:url" content="https://localflowvoice.com/faq.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='5' fill='%23e8461a'/%3E%3Cg fill='%23fff4e6'%3E%3Crect x='5' y='10' width='2.6' height='6' rx='1.3'/%3E%3Crect x='9.3' y='7' width='2.6' height='12' rx='1.3'/%3E%3Crect x='13.6' y='4.5' width='2.6' height='17' rx='1.3'/%3E%3Crect x='17.9' y='8.5' width='2.6' height='9' rx='1.3'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/Archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="wordmark" href="index.html"><svg viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="5" fill="currentColor"/><g fill="var(--ground)"><rect x="5" y="10" width="2.6" height="6" rx="1.3"/><rect x="9.3" y="7" width="2.6" height="12" rx="1.3"/><rect x="13.6" y="4.5" width="2.6" height="17" rx="1.3"/><rect x="17.9" y="8.5" width="2.6" height="9" rx="1.3"/></g></svg>LocalFlow</a>
+  <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="download.html">Download</a><a href="faq.html" aria-current="page">FAQ</a><a href="privacy.html">Privacy</a><a href="changelog.html">Changelog</a></nav>
+</div></header>
+<main>
+
+<section class="page"><div class="wrap faq">
+  <h1>Questions</h1>
+  <details open><summary>Is it really free?</summary><div><p>Yes. There's no paid tier, no trial and no account.</p></div></details>
+  <details><summary>Does anything leave my Mac?</summary><div><p>Not unless you set it up that way. Out of the box, your voice and your words stay on your Mac, and the only network use is the one-time model download from Hugging Face. See <a href="privacy.html">Privacy</a>.</p></div></details>
+  <details><summary>Why does macOS say it can't verify the developer?</summary><div><p>LocalFlow isn't signed with an Apple Developer ID yet. macOS blocks unsigned apps until you approve them once: System Settings, Privacy &amp; Security, Open Anyway. The <a href="download.html">download page</a> walks through it.</p></div></details>
+  <details><summary>Which Macs does it run on?</summary><div><p>Apple Silicon (M1 or later) on macOS 13 or later. 16 GB of memory is recommended: the cleanup model keeps about 5 GB loaded so it answers fast. Intel Macs are not supported.</p></div></details>
+  <details><summary>How fast is it?</summary><div><p>On our M-series Mac, a typical sentence goes from your last tap to pasted text in about a second; the cleanup step takes 0.4 to 0.7 seconds. The first dictation after you open the app is slower while the model loads.</p></div></details>
+  <details><summary>Which apps does it work in?</summary><div><p>Any app with a text cursor: Claude, ChatGPT, Cursor, VS Code, your terminal, Slack, Mail, Notes. It pastes with Command-V.</p></div></details>
+  <details><summary>Will it answer my question instead of typing it?</summary><div><p>No. The cleanup step is built to return your question or request as text, never to answer or carry it out. In our 15-dictation test it did that every time.</p></div></details>
+  <details><summary>Can I use fn instead of Caps Lock?</summary><div><p>Yes, pick it in the setup window. Also set System Settings, Keyboard, "Press Globe key to" to Do Nothing. Some keyboards (many Keychron and Logitech) never send fn to macOS; use Caps Lock there.</p></div></details>
+  <details><summary>Other languages?</summary><div><p>Not yet. The speech model is English only.</p></div></details>
+  <details><summary>How do I uninstall it?</summary><div><p>Quit LocalFlow from the menu bar, drag it from Applications to the Trash, and delete <code>~/Library/Application Support/LocalFlow</code> to remove the models.</p></div></details>
+</div></section>
+
+</main>
+<footer class="foot"><div class="wrap">
+  <span>Built by Ryan Loofbourrow, from the team at <a href="https://ingestdata.ai">Ingest</a>.</span>
+  <nav aria-label="Footer"><a href="download.html">Download</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="changelog.html">Changelog</a></nav>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
